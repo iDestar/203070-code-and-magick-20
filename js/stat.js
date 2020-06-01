@@ -15,7 +15,7 @@ var getRandomColorHsl = function() {
 	var hue = 240;
 	var saturation = Math.floor(Math.random() * 100);
 	var lightness = 45;
-	return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+	return 'hsl(${hue}, ${saturation}%, ${lightness}%)';
 }
 
 var renderCloud = function(ctx, x, y, color) {
