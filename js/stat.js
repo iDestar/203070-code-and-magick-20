@@ -62,7 +62,7 @@ window.renderStatistics = function(ctx, players, times) {
     ctx.fillText(players[i],CLOUD_X + BAR_GAP + ( BAR_HEIGHT + BAR_GAP) * i,CLOUD_HEIGHT - CLOUD_Y);
 
     ctx.fillStyle = '#000';
-    ctx.fillText(Math.round(times[i]), CLOUD_X + BAR_GAP + (BAR_HEIGHT + BAR_GAP) * i , CLOUD_HEIGHT - CLOUD_Y - (barWidth * times[i]) / maxTime - (FONT_GAP * 2);
+    ctx.fillText(Math.round(times[i]), CLOUD_X + BAR_GAP + (BAR_HEIGHT + BAR_GAP) * i , CLOUD_HEIGHT - CLOUD_Y - (barWidth * times[i]) / maxTime - FONT_GAP * 2);
 
   }
 };
