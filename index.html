@@ -178,17 +178,13 @@
       </svg>
     </div>
     <p class="setup-similar-label">Петр Петров</p>
-  </div>
+  </div>x
 </template>
 <script>
 var fireballSize = 22;
 
   function getFireballSpeed (isHeadWind) {
-    if (!isHeadWind) {
-      return 5;
-    }
-
-    return 2;
+    return (!isHeadWind) ?  5 :  2;
    }
 
   var wizardWidth = 70;
