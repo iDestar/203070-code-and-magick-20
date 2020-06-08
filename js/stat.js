@@ -10,13 +10,6 @@ var BAR_HEIGHT = 40;
 var BAR_GAP = 50;
 var barWidth = 150;
 
-var getRandomColorHsl = function () {
-  var hue = 240;
-  var saturation = Math.floor(Math.random() * 100);
-  var lightness = 45;
-  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-};
-
 var renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
@@ -53,7 +46,8 @@ window.renderStatistics = function (ctx, players, times) {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
 
     } else {
-      ctx.fillStyle = getRandomColorHsl();
+      var saturation = 15 * i + '%';
+      ctx.fillStyle = 'hsl(240, ' + saturation + ', 50%)';
     }
     ctx.fillRect(CLOUD_X + BAR_GAP + (BAR_HEIGHT + BAR_GAP) * i, CLOUD_HEIGHT - CLOUD_Y - GAP - FONT_GAP, BAR_HEIGHT, (-barWidth * times[i]) / maxTime);
 
