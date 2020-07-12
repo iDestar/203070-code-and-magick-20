@@ -71,8 +71,8 @@
   <form class="setup-wizard-form"
         method="post"
         enctype="multipart/form-data"
-        autocomplete="off"
-        action="https://js.dump.academy/code-and-magick">
+        autocomplete="off">
+
     <div class="setup-title">
       <div class="setup-user">
         <div class="upload">
@@ -86,7 +86,7 @@
         </label>
       </div>
 
-      <span class="setup-close" tabindex="0">&times;</span>
+      <span class="setup-close">&times;</span>
     </div>
 
 
@@ -178,24 +178,21 @@
       </svg>
     </div>
     <p class="setup-similar-label">Петр Петров</p>
-  </div>x
+  </div>
 </template>
-
-<script src="js/setup.js"></script>
-<script src="js/game.js"></script>
 <script>
 var fireballSize = 22;
 
-  function getFireballSpeed (isHeadWind) {
-    return (!isHeadWind) ?  5 :  2;
-   }
+function getFireballSpeed (isHeadWind) {
+  return (!isHeadWind) ?  5 :  2;
+ }
+
 
   var wizardWidth = 70;
 
   function getWizardHeight () {
     return 1.337 * wizardWidth;
   }
-
 
   var wizardSpeed = 3;
 
@@ -207,6 +204,8 @@ var fireballSize = 22;
     return gameFieldHeight / 3;
   }
 </script>
+
+<script src="js/game.js"></script>
 <script src="js/stat.js"></script>
 </body>
 </html>
