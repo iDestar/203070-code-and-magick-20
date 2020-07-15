@@ -47,7 +47,7 @@
 
   var form = userDialog.querySelector('.setup-wizard-form');
   form.addEventListener('submit', function (evt) {
-    window.upload(new FormData(form), function (response) {
+    window.upload(new FormData(form), function () {
       userDialog.classList.add('hidden');
     });
     evt.preventDefault();
